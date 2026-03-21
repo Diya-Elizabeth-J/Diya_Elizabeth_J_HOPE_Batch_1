@@ -1,0 +1,66 @@
+//Subway Surface with switch case 
+
+
+import java.util.*;
+public class SubwaySurface {
+  
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        Random random = new Random();
+
+        int position = 1;
+        int score = 0;
+        boolean alive = true;
+
+        System.out.println("Subway Mini Game Started!");
+        System.out.println("Controls: l-Left  r-Right  j-Jump  s-Slide");
+
+        while (alive) {
+
+            int obstacleLane = random.nextInt(3);
+            System.out.println("\nObstacle in lane: " + obstacleLane+"\n");
+            char action = sc.next().charAt(0);
+
+            switch (action) {
+
+                case 'l':
+                case 'a': 
+                    position--;
+                    if (position < 0) position = 0;
+                    System.out.println(" Moved Left");
+                    break;
+
+                case 'r':
+                case 'd':
+                    position++;
+                    if (position > 2) position = 2;
+                    System.out.println("Moved Right");
+                    break;
+
+                case 'j':
+                case 'w':
+                    System.out.println("Jumping");
+                    break;
+
+                case 's': 
+                    System.out.println("Slidding");
+                    break;
+
+                default:
+                    System.out.println("Invalid move");
+            }
+            if (position == obstacleLane) {
+                System.out.println("\t\tHit obstacle! \n \t\tGame Over");
+                alive = false;
+                break;
+            }
+             score++;
+
+            System.out.println("Score: " + score );
+        }
+
+        System.out.println("\nFinal Score: " + score);
+       
+    }
+} 
