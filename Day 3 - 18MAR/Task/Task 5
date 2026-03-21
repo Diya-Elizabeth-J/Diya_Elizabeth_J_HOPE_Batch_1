@@ -1,0 +1,38 @@
+leetcode - 2864
+
+You are given a binary string s that contains at least one '1'.
+You have to rearrange the bits in such a way that the resulting binary number is the maximum odd binary number that can be created from this combination.
+Return a string representing the maximum odd binary number that can be created from the given combination.
+Note that the resulting string can have leading zeros.
+
+
+class Solution {
+    public String maximumOddBinaryNumber(String s) {
+        int count=0;
+        char[] arr=s.toCharArray();
+        int n=arr.length;
+        char[] res=new char[n];
+        for(char i:arr){
+            if(i=='1')
+                count++;
+        }
+        Arrays.fill(res,'0');
+        if(count==1){
+            res[n-1]='1';
+            return new String(res);
+        }
+        else{
+            int i=0;
+            while(count>1){   
+                res[i]='1';
+                i++;
+                count--;
+            }
+            res[n-1]='1';
+            return new String(res);
+        }
+    }
+}
+
+
+https://leetcode.com/problems/maximum-odd-binary-number/submissions/1953248454/
