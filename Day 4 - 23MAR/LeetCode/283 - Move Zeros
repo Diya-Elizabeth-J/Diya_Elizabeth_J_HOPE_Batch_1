@@ -1,0 +1,14 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int front,rear,temp=0;
+        for(front=0,rear=0;front<nums.length;front++){
+            if(nums[front]!=0){
+                temp=nums[front];
+                nums[front]=nums[rear];
+                nums[rear]=temp;
+                rear++;
+            }
+        }
+    System.out.print(Arrays.toString(nums));
+    }
+}
