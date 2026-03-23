@@ -1,0 +1,17 @@
+import java.util.*;
+public class GradingSystem {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        System.out.print("Enter CGPA : ");
+        double cgpa=sc.nextDouble();
+        if(cgpa>=8.5)
+                System.out.println("First Class with Distinction");
+        else if(cgpa>=7.5)
+                System.out.println("First Class");
+        else if(cgpa>=6.5)
+                System.out.println("Second Class");
+        else
+                System.out.println("Failed");
+  }
+}
