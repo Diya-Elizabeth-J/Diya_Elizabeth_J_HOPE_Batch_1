@@ -1,0 +1,17 @@
+import java.util.*;
+public class MathematicalOperations {
+  
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+    //Addition/Subtraction/Multiplication/Division/Mod
+
+        int a,b;
+        System.out.print("enter value a : ");
+        a=sc.nextInt();
+        System.out.print("enter value b : ");
+        b=sc.nextInt();
+        System.out.print("Additiion : "+ (a+b) +"\n" +"Subtration : "+ (a-b) +"\n");
+        System.out.print("Multiplaction : "+ (a*b) +"\n" + "Division : "+ (a/b) +"\n" + "Modulus : "+(a%b));
+   }
+}
