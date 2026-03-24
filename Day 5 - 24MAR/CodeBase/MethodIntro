@@ -1,0 +1,18 @@
+class Methods{
+    public static void main(String[] args){
+        String s="Hello";
+        System.out.println(s);
+        Day_5Methods obj=new Day_5Methods();
+        square(5);
+        System.out.println(obj.addition(8));
+    }
+
+
+    public static void square(int n){
+      System.out.println(n*n);
+    }
+
+    public int addition(int n){
+        return n+n;
+    }
+}
