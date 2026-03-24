@@ -1,0 +1,11 @@
+public class SB {
+    public static void main(String[] args) {
+        StringBuilder sb=new StringBuilder("Hello");
+        sb.append(" World");
+        System.out.println(sb);
+        StringBuffer sbf=new StringBuffer("Hello");
+        System.out.println(sbf);
+        sbf.append(" sbf");
+        System.out.println(sbf);
+    }
+}
