@@ -1,0 +1,50 @@
+//No Parameters, With Return Value
+
+class Main {
+    public static int getNumber() {
+        int n=987;
+        return n;
+    }
+    public static void main(String[] args) {
+        int num = getNumber();
+        System.out.println(num);
+    }
+}
+
+//No Parameters, No Return Value
+
+class Main {
+    public static void Num() {
+        int n=765;
+        System.out.println("Printed number : "+n);
+    }
+    public static void main(String[] args) {
+        Num();  
+    }
+}
+
+//With Parameters, No Return Value
+
+class Main {
+
+    public static void printSum(int a, int b) {
+        System.out.println("The sum of (a + b) is "+(a+b));
+    }
+
+    public static void main(String[] args) {
+        printSum(5, 3);
+    }
+}
+
+//With Parameters, With Return Value
+
+class Main {
+
+    public static int add(int a, int b) {
+        return a + b;
+    }
+    public static void main(String[] args) {
+        int result = add(5, 3);
+        System.out.println("the sum is "+result);
+    }
+}
