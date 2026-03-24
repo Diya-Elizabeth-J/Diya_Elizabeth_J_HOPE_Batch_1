@@ -4,47 +4,47 @@ public class StringsFeatures {
         // String Builder
         StringBuilder sb = new StringBuilder("Hello");
 
-        System.out.println("StringBuilder Operations:");
+        System.out.println("StringBuilder Builtins:");
         
         sb.append(" World");                
-        System.out.println("Append: " + sb);
+        System.out.println("Append: " + sb);     //Hello World
 
         sb.insert(5, " Java");               
-        System.out.println("Insert: " + sb);
+        System.out.println("Insert: " + sb);     //Hello Java World
 
         sb.replace(0, 5, "Hi");             
-        System.out.println("Replace: " + sb);
+        System.out.println("Replace: " + sb);    //Hi Java World
 
         sb.delete(2, 7);                     
-        System.out.println("Delete: " + sb);
+        System.out.println("Delete: " + sb);     //Hi World
 
         sb.reverse();                        
-        System.out.println("Reverse: " + sb);
+        System.out.println("Reverse: " + sb);    //dlroW iH
 
-        System.out.println("Length: " + sb.length());    
+        System.out.println("Length: " + sb.length());    //8
 
 
         //String Buffer
         StringBuffer sbf = new StringBuffer("Hello");
 
-        System.out.println("\nStringBuffer Operations:");
+        System.out.println("\nStringBuffer Builtins:");
         
         sbf.append(" World");
-        System.out.println("Append: " + sbf);
+        System.out.println("Append: " + sbf);     //Hello World
 
         sbf.insert(5, " Java");
-        System.out.println("Insert: " + sbf);
+        System.out.println("Insert: " + sbf);     //Hello Java World
 
         sbf.replace(0, 5, "Hi");
-        System.out.println("Replace: " + sbf);
+        System.out.println("Replace: " + sbf);    //Hi Java World
 
         sbf.delete(2, 7);
-        System.out.println("Delete: " + sbf);
+        System.out.println("Delete: " + sbf);     //Hi World
 
         sbf.reverse();
-        System.out.println("Reverse: " + sbf);
+        System.out.println("Reverse: " + sbf);    //dlroW iH
 
-        System.out.println("Length: " + sbf.length());
+        System.out.println("Length: " + sbf.length());   //8
      
     }
 
