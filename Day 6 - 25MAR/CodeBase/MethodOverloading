@@ -3,7 +3,7 @@ class Over{
         System.out.println("Hello from other side");
     }
     Over(int i){
-        System.out.println("I : "+i);
+        System.out.println("Integer : "+i);
     }
     Over(String s){
         System.out.println("Message : "+s);
