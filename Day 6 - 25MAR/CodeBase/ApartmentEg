@@ -1,0 +1,31 @@
+/*build 3 apartment 
+1 has one bhk common restroom common playground common dinning hall
+2 has two bhk attached restroom common playground common dinning
+3 has 4bhk attached restroom each two bedroom has common hall then  kitchen and common dinning common playground */
+
+
+package Day6;
+
+public class Apart {
+    public static void main(String[] args) {
+        Type t1=new Type(1);
+        Type t2=new Type(2);
+        Type t4=new Type(4);
+
+
+    }
+}
+class Type{
+    Type(int num){
+        System.out.println( "Apartment with "+ num + " BHK\n");
+        if(num==1)
+            System.out.println("Restroom Common");
+        System.out.println("Restroom: Attached");
+        if(num==4){
+            System.out.println("4 Bedrooms with 1 Hall");
+            System.out.println("Kitchen: Yes");
+        }
+        System.out.println("Playground: Common");
+        System.out.println("Dining: Common\n");
+    }
+}
