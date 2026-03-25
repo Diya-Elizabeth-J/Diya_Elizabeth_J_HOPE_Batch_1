@@ -14,7 +14,7 @@ public class Constructor {
     }
 }
 
-/*public class Constructor {
+public class Constructor {
     public Constructor(){
         System.out.println("im in default constructor");
     }
@@ -25,4 +25,4 @@ public class Constructor {
 
     }
 }
- */
+ 
