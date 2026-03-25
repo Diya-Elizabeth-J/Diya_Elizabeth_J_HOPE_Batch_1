@@ -1,4 +1,3 @@
-package Day6;
 class Over{
     Over(){
         System.out.println("Hello from other side");
