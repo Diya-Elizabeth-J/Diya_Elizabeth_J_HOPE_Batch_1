@@ -1,0 +1,19 @@
+package Day6;
+class Over{
+    Over(){
+        System.out.println("Hello from other side");
+    }
+    Over(int i){
+        System.out.println("I : "+i);
+    }
+    Over(String s){
+        System.out.println("Message : "+s);
+    }
+}
+public class COverloding {
+    public static void main(String[] args) {
+        Over c=new Over();
+        Over i=new Over(89);
+        Over s=new Over("Hello person on the other side");
+    }
+}
