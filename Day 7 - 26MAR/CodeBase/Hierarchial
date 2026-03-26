@@ -1,0 +1,28 @@
+
+class College{
+    void display(){
+        System.out.println("College of 32 years");
+    }
+}
+class Teacher extends College{
+    void Type(){
+        System.out.println("Teacher teaches Cs in JCollege");
+    }
+}
+class Student extends College{
+
+    void Dept(){
+
+        System.out.println("Cs Student taught by Cteacher");
+    }
+}
+public class Hierarchial {
+    public static void main(String[] args) {
+     Student s=new Student();
+     s.Dept();
+     s.display();   
+     Teacher c=new Teacher();
+     c.Type();
+     c.display();
+    }
+}
