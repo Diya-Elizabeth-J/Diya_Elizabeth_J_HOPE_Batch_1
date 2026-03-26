@@ -1,0 +1,60 @@
+// Example for inheritance
+
+class Vechile{
+    void display(){
+        System.out.println("There is an vechile , mention what is the vechile");
+    }
+}
+class Classify extends Vechile{
+    void Type(){
+        System.out.println("it's a car");
+    }
+}
+class Car extends Classify{
+
+    void bark(){
+
+        System.out.println("Electric Car ");
+    }
+}
+public class Inhertiance {
+    public static void main(String[] args) {
+     Car s=new Car();
+     s.bark();
+     s.Type();
+     s.display();   
+     Classify c=new Classify();
+     c.Type();
+     c.display();
+    }
+}
+
+
+
+class Animal{
+    void display(){
+        System.out.println("There is an animal , mention its sound");
+    }
+}
+class Classify extends Animal{
+    void Type(){
+        System.out.println("It's a Dog");
+    }
+}
+class Dog extends Classify{
+    void bark(){
+        System.out.println("BARKK!!");
+    }
+}
+public class Inhertiance {
+    public static void main(String[] args) {
+     Dog s=new Dog();
+     s.bark();
+     s.Type();
+     s.display();   
+     Classify c=new Classify();
+     c.Type();
+     c.display();
+    }
+}
+
