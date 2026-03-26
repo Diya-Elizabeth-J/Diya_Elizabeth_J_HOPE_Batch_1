@@ -1,0 +1,23 @@
+class Parent{
+    void display(){
+    System.out.println("Im inside parent class but called by child class");
+    }
+}
+class child extends Parent{
+    void display1(){
+        System.out.println("Inside child class");
+    }
+}
+public class SimpleInheritance {
+    public static void main(String[] args) {
+        System.out.println("Inside Main Function");
+        child oc = new child();
+        oc.display();
+        oc.display1();
+       Parent p=new child();
+       p.display();
+       
+       // Parent op=new Parent();
+       // op.display();
+    }
+}
