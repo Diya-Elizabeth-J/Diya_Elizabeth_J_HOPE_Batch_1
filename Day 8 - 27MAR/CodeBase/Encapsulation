@@ -1,0 +1,23 @@
+package Day8;
+
+class Encapsulations{
+   /*
+   int b;
+    Encapsulations(int a){
+        b=a;
+    }
+    */ 
+   int b;
+    Encapsulations(){
+        b=10;
+    }
+    void display(){
+        System.out.println("Implementation of Encapsulation "+b);
+    }
+}
+public class Encapsulation {
+ public static void main(String[] args) {
+    Encapsulations e=new Encapsulations();
+    e.display();
+ }   
+}
