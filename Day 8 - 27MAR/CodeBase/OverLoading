@@ -1,0 +1,23 @@
+package Day8;
+
+class Calculation{
+    public void cal(int a,int b){
+        System.out.println("Addition of two number : "+(a+b));
+    }
+    public void cal(int a,int b,int c){
+        System.out.println("Addition of three number : "+(a+b+c));
+    }
+    public void cal(int a){
+        System.out.println("Addition :"+ (a));
+    }
+}
+public class Overloadingexam {
+    public static void main(String[] args) {
+        Calculation c=new Calculation();
+        c.cal(5);
+        c.cal(5,10,15);
+        c.cal(5,19);
+    }
+
+    
+}
