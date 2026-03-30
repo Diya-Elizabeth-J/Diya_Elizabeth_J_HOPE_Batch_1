@@ -1,0 +1,45 @@
+package Day8;
+class BankAccount{
+    private int AccountNo;
+    private double Balance;
+    BankAccount(int acc, double bal){
+        AccountNo=acc;
+        Balance=bal;
+    }
+
+    public void Balance(double Bal){
+        
+        System.out.println("The Account No:"+AccountNo+" Balance : "+ Balance);
+    }
+    public void WithDraw(double amount){
+        if(amount>Balance){
+            System.out.println("Invalid Funds"); 
+        }
+        else{
+        Balance =Balance-amount;
+        System.out.println("Amount Withdrawn : "+amount);
+        System.out.println("Remaining Balance : "+Balance);
+        }
+    }
+     public void deposit(double amount) {
+        Balance += amount;
+        System.out.println("Amount Deposited: " + amount);
+        System.out.println("Final Balance: " + Balance);
+    }
+    public void showBalance() {
+        System.out.println("Account No: " + AccountNo + " | Balance: " + Balance);
+    }
+
+}
+public class EncapBankExample {
+ public static void main(String[] args) {
+    BankAccount ba=new BankAccount(3241, 9414.98);
+    ba.showBalance();      
+        ba.deposit(500);
+        ba.WithDraw(2000);
+        ba.WithDraw(10000);    
+        ba.showBalance();   
+ }   
+}
+
+
