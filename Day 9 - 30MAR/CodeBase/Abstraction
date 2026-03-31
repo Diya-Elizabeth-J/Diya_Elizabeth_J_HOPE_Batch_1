@@ -1,0 +1,28 @@
+//abstract class 
+abstract class Animal{
+    abstract void sound();
+
+    void eat(){
+        System.out.println("Eating...");
+    }
+    
+}
+//concrete class
+class Dog extends Animal{
+    void sound(){
+        System.out.println("BARKKK!!!");
+    }
+}
+class Cat extends Animal{
+     void sound(){
+        System.out.println("MEOWWW!!!");
+    }
+}
+public class Abstaction {
+    public static void main(String[] args) {
+        Animal a=new Cat();
+        
+        a.sound();
+        a.eat();
+    }
+}
