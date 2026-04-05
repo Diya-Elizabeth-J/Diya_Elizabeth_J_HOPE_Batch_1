@@ -1,0 +1,15 @@
+import java.util.*;
+public class ArraylistImplementation{
+    public static void main(String[] args) {
+        ArrayList<Integer> arrlist=new ArrayList<>();
+        arrlist.add(null);
+        arrlist.add(10);
+        arrlist.add(20);
+        System.out.println(arrlist);
+        arrlist.set(0,50);
+        System.out.println(arrlist);
+        System.out.println(arrlist.get(0));
+        arrlist.remove(2);
+        System.out.println(arrlist);
+    }
+}
