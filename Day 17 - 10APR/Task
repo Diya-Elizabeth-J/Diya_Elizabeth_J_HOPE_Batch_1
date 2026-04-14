@@ -1,0 +1,46 @@
+import java.util.*;
+
+class Age implements Comparator<Student> {
+    public int compare(Student s1, Student s2) {
+        return Integer.compare(s1.age, s2.age); 
+    }
+}
+class Marks implements Comparator<Student> {
+    public int compare(Student s1, Student s2) {
+        return Double.compare(s1.marks, s2.marks); 
+    }
+}
+class Mixed implements Comparator<Student> {
+    public int compare(Student s1, Student s2) {
+        if (s1.age == s2.age) {
+            return Double.compare(s2.marks, s1.marks); 
+        }
+        return Integer.compare(s1.age, s2.age); 
+    }
+}
+class Student {
+    int rollno;
+    int age;
+    double marks;
+    Student(int rollno, int age, double marks) {
+        this.rollno = rollno;
+        this.age = age;
+        this.marks = marks;
+    }
+}
+
+public class classTask {
+    public static void main(String[] args) {
+
+        List<Student> l = new ArrayList<>();
+        l.add(new Student(1,24,85.0));
+        l.add(new Student(12,99,11.39));
+        l.add(new Student(23,11,57.1));
+        l.add(new Student(43,32,98.3));
+        Collections.sort(l, new Mixed());
+        System.out.println("Sort by Age and Marks:");
+        for (Student s : l) {
+            System.out.println(s.rollno + " " + s.age + " " + s.marks);
+        }
+    }
+}
