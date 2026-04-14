@@ -1,0 +1,75 @@
+import java.util.*;
+class Word implements Comparable<Word> {
+    String value;
+    public Word(String value) {
+        this.value = value;
+    }
+    public int compareTo(Word other) {
+        return this.value.compareTo(other.value); 
+    }
+    public String toString() {
+        return value;
+    }
+}
+public class TextDiffTool {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Text 1:");
+        String text1 = sc.nextLine();
+        System.out.println("Enter Text 2:");
+        String text2 = sc.nextLine();
+        findDiff(text1, text2);
+        sc.close();
+    }
+    public static void findDiff(String text1, String text2) {
+
+        text1 = text1.replaceAll("[^a-zA-Z ]", "");
+        text2 = text2.replaceAll("[^a-zA-Z ]", "");
+        String[] words1 = text1.split("\\s+");
+        String[] words2 = text2.split("\\s+");
+        Set<String> set1 = new HashSet<>(Arrays.asList(words1));
+        Set<String> set2 = new HashSet<>(Arrays.asList(words2));
+        List<Word> diffList = new ArrayList<>();
+        List<Word> commonList = new ArrayList<>();
+
+        for (String word : set2) {
+            if (!set1.contains(word)) {
+                diffList.add(new Word(word));
+            }
+        }
+        for (String word : set1) {
+            if (!set2.contains(word)) {
+                diffList.add(new Word(word));
+            }
+        }
+        for (String word : set1) {
+            if (set2.contains(word)) {
+                commonList.add(new Word(word));
+            }
+        }
+        Collections.sort(diffList);
+        Collections.sort(commonList);
+        System.out.println("\n\t TEXT DIFFERENCE");
+
+        System.out.println("\nDifferent Words:");
+        if (diffList.isEmpty()) {
+            System.out.println("None");
+        } else {
+            int count = 1;
+            for (Word w : diffList) {
+                System.out.println(count++ + ". " + w);
+            }
+            System.out.println("\nDifferent Count : " + diffList.size());
+        }
+        System.out.println("\nCommon Words:");
+        if (commonList.isEmpty()) {
+            System.out.println("None");
+        } else {
+            int count = 1;
+            for (Word w : commonList) {
+                System.out.println(count++ + ". " + w);
+            }
+            System.out.println("\nCommon Count : " + commonList.size());
+        }
+    }
+}
