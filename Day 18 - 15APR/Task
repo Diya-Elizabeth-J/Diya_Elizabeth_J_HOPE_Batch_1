@@ -1,0 +1,37 @@
+package Day18;
+
+import java.io.*;
+
+public class FileHandling {
+    public static void main(String[] args) {
+        try {
+            File oldFile = new File("hope_batch.txt");
+            File newFile = new File("hope_batch_non_elite.txt");
+            if (oldFile.renameTo(newFile)) {
+                System.out.println("File renamed successfully");
+            } else {
+                System.out.println("Rename failed");
+            }
+  
+            FileReader reader = new FileReader(newFile);
+            BufferedReader br = new BufferedReader(reader);
+
+            FileWriter writer = new FileWriter("copy_hope_batch.txt");
+            BufferedWriter bw = new BufferedWriter(writer);
+
+            String line;
+            while ((line = br.readLine()) != null) {
+                bw.write(line);
+                bw.newLine();
+            }
+
+            br.close();
+            bw.close();
+
+            System.out.println("Content copied successfully");
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
